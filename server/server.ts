@@ -1,15 +1,23 @@
 import express from "express";
 import { Server, Socket } from "socket.io";
 import { createServer } from "http";
+import cors from "cors";
 
 const app = express();
-const httpServer = createServer();
-const io = new Server(httpServer);
+app.use(cors());
+const server = createServer(app);
+
+const io = new Server(server, {
+	cors: {
+		origin: "http://localhost:5173",
+		methods: ["GET", "POST"],
+	},
+});
 
 io.on("connection", (socket: Socket) => {
 	console.log(socket.id);
 });
 
-app.listen(3000, () => {
+server.listen(3000, () => {
 	console.log(`Server running ${3000}`);
 });
