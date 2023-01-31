@@ -15,7 +15,9 @@ const io = new Server(server, {
 });
 
 io.on("connection", (socket: Socket) => {
-	console.log(socket.id);
+	socket.on("sendMsg", (data) => {
+		socket.emit("getMsg", data);
+	});
 });
 
 server.listen(3000, () => {
