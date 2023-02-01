@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import * as io from "socket.io-client";
 import { ServerToClientEvents, ClientToServerEvents } from "../../typings";
+
 const socket: io.Socket<ServerToClientEvents, ClientToServerEvents> =
 	io.connect("http://localhost:3000");
 
@@ -17,8 +18,8 @@ function App() {
 	};
 
 	useEffect(() => {
-		socket.on("getMsg", (data) => {
-			setMessages([...messages!, data]);
+		socket.on("serverMsg", (data) => {
+			setMessages([...messages!, data.msg]);
 		});
 	}, [socket, messages]);
 	console.log(messages);

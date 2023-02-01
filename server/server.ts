@@ -28,10 +28,10 @@ io.on(
 		socket.on("clientMsg", (data) => {
 			console.log(data);
 			if (data.room === "") {
-				io.sockets.emit("getMsg", data.msg);
+				io.sockets.emit("serverMsg", data);
 			} else {
 				socket.join(data.room);
-				io.to(data.room).emit("getMsg", data.msg);
+				io.to(data.room).emit("serverMsg", data);
 			}
 		});
 	}
