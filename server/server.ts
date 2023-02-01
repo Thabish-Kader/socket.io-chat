@@ -25,7 +25,7 @@ instrument(io, {
 io.on(
 	"connection",
 	(socket: Socket<ClientToServerEvents, ServerToClientEvents>) => {
-		socket.on("sendMsg", (data) => {
+		socket.on("clientMsg", (data) => {
 			console.log(data);
 			if (data.room === "") {
 				io.sockets.emit("getMsg", data.msg);
