@@ -13,6 +13,8 @@
 <br/>
 <br/>
 
+Learn how to build scalable, efficient and type-safe real-time applications with Socket.IO and TypeScript. This video will guide you step by step through the process of setting up a project with these technologies, from installing dependencies to coding the client and server. If you are 'new to real-time communication, this video will help you out.
+
 ### Resources
 
 -   [Server Initialization](https://socket.io/docs/v4/server-initialization/)
