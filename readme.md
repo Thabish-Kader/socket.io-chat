@@ -15,6 +15,9 @@
 
 Learn how to build scalable, efficient and type-safe real-time applications with Socket.IO and TypeScript. This video will guide you step by step through the process of setting up a project with these technologies, from installing dependencies to coding the client and server. If you are 'new to real-time communication, this video will help you out.
 
+## YT Video
+[![Socket.io + TypeScript : Build Type-Safe Real-time Apps](https://ytcards.demolab.com/?id=mWeiODJIHVs&title=Socket.io+%2B+TypeScript+%3A+Build+Type-Safe+Real-time+Apps&lang=en&timestamp=1676594100&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250 "Socket.io + TypeScript : Build Type-Safe Real-time Apps")](https://www.youtube.com/watch?v=mWeiODJIHVs)
+
 ### Resources
 
 -   [Server Initialization](https://socket.io/docs/v4/server-initialization/)
